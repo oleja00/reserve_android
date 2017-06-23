@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/history"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/ivGuestImage"
+        android:layout_width="@dimen/item_socket_width_height"
+        android:layout_height="@dimen/item_socket_width_height"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@mipmap/client_placeholder" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/ivIcon"-->
+        <!--android:layout_width="24dp"-->
+        <!--android:layout_height="24dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@+id/toolbar"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:background="@android:color/black"-->
+        <!--android:contentDescription="@null"-->
+        <!--android:src="@mipmap/ic_launcher" />-->
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvGuests"
+        android:layout_alignStart="@+id/tvGuests"
+        android:layout_alignTop="@+id/ivGuestImage"
+        android:background="@drawable/background_text_green"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Restaurant"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvGuests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDistance"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@id/ivGuestImage"
+        android:layout_toRightOf="@id/ivGuestImage"
+        android:text="@string/guests"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_socket_title_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvGuestsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDistance"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tvGuests"
+        android:layout_toRightOf="@id/tvGuests"
+        android:textSize="@dimen/item_socket_title_text_size"
+        tools:text="4" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivGuestImage"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@id/ivGuestImage"
+        android:layout_toRightOf="@id/ivGuestImage"
+        android:text="@string/distance"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_socket_title_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDistanceCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivGuestImage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tvDistance"
+        android:layout_toRightOf="@id/tvDistance"
+        android:textSize="@dimen/item_socket_title_text_size"
+        tools:text="2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ivGuestImage"
+        android:layout_margin="3dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvClientsNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivGuestImage"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_background"
+        android:padding="5dp"
+        android:text="@string/note_from_client" />
+
+    <TextView
+        android:id="@+id/tvNoteFromClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvClientsNote"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="note_from_client" />
+
+    <Button
+        android:id="@+id/bSendOffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/buttonDetailServiceHistoryBackground"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

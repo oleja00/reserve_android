@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:background="@color/grey_background"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/ivPlaceImage"
+        android:background="@android:color/black"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@null"
+        android:layout_width="@dimen/item_socket_width_height"
+        android:layout_height="@dimen/item_socket_width_height"/>
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:textSize="@dimen/item_socket_title_text_size"
+        android:textColor="@android:color/black"
+        android:text="Restaurant"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_below="@+id/tvCategory"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:textSize="@dimen/item_socket_text_size"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Restaurant"
+        android:layout_height="wrap_content" />
+
+    <com.maxkudla.reserve.presenter.common.views.SetOfStarView
+        android:id="@+id/setOfStar"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivPlaceImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/item_socket_text_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/ivPlaceImage"
+        android:textColor="@android:color/black"
+        android:text="$$-$$$"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivIconTaxi"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@null"
+        android:layout_width="@dimen/item_socket_icon_type_width_height"
+        android:layout_height="@dimen/item_socket_icon_type_width_height"/>
+
+</RelativeLayout>

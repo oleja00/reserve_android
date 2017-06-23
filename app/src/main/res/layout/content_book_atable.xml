@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_book_atable">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivDescribe"
+            android:layout_width="@dimen/book_table_iv_describe_width_height"
+            android:layout_height="@dimen/book_table_iv_describe_width_height"
+            android:layout_margin="@dimen/book_table_iv_describe_margin"
+            tools:src="@mipmap/ic_launcher"
+            tools:background="@android:color/black"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tvNameBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/book_table_margin"
+            android:layout_toEndOf="@+id/ivDescribe"
+            android:layout_toRightOf="@+id/ivDescribe"
+            android:text="Restourant"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/book_table_title_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAddressBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameBook"
+            android:layout_toEndOf="@+id/ivDescribe"
+            android:layout_toRightOf="@+id/ivDescribe"
+            android:text="Кирова 22a"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/book_table_text_size" />
+
+        <TextView
+            android:id="@+id/tvBookPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/book_table_margin"
+            android:layout_toStartOf="@+id/setOfStar"
+            android:layout_toLeftOf="@+id/setOfStar"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="$$-$$$"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/item_socket_text_size"
+            android:textStyle="bold" />
+
+
+        <com.maxkudla.reserve.presenter.common.views.SetOfStarView
+            android:id="@+id/setOfStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignBottom="@+id/ivDescribe"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tvAboutPlace"
+            android:text="About Restaurant"
+            android:layout_marginLeft="@dimen/book_table_margin"
+            android:layout_marginRight="@dimen/book_table_margin"
+            android:layout_below="@+id/ivDescribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDescriptionBook"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAboutPlace"
+            android:layout_marginLeft="@dimen/book_table_margin"
+            android:layout_marginRight="@dimen/book_table_margin"
+            android:text="@string/book_table_describe"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/book_table_text_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tvDescriptionBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/bookRecycler"/>
+
+        <ImageView
+            android:contentDescription="@null"
+            android:id="@+id/ivMap"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/bookRecycler"
+            android:layout_height="200dp" />
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

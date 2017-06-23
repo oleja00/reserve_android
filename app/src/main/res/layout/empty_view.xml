@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivPlaceImage"
+            android:layout_width="@dimen/item_socket_width_height"
+            android:layout_height="@dimen/item_socket_width_height"
+            android:background="@color/grey_text_color"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvPlaceName"
+            android:text="                        "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_toEndOf="@id/ivPlaceImage"
+            android:layout_toRightOf="@id/ivPlaceImage"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:background="@color/grey_text_color"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/tvSubTitle"
+            android:text="                  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPlaceName"
+            android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_toEndOf="@id/ivPlaceImage"
+            android:layout_toRightOf="@id/ivPlaceImage"
+            android:ellipsize="end"
+            android:lines="1"
+            android:background="@color/grey_text_color"
+            android:textSize="@dimen/item_socket_text_size" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:text="          "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/setOfStar"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_toEndOf="@id/ivPlaceImage"
+            android:layout_toRightOf="@id/ivPlaceImage"
+            android:ellipsize="end"
+            android:lines="1"
+            android:background="@color/grey_text_color"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="@dimen/item_socket_text_size" />
+
+        <TextView
+            android:id="@+id/tvPlaceAddress"
+            android:text="               "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/setOfStar"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_toEndOf="@id/tvDistance"
+            android:layout_toRightOf="@id/tvDistance"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:background="@color/grey_text_color"
+            android:maxLines="1"
+            android:textSize="@dimen/item_socket_text_size" />
+
+        <TextView
+            android:id="@+id/setOfStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivPlaceImage"
+            android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+            android:layout_toEndOf="@id/ivPlaceImage"
+            android:text="                                     "
+            android:background="@color/grey_text_color"
+            android:layout_toRightOf="@id/ivPlaceImage" />
+
+        <TextView
+            android:id="@+id/tvPricePlace"
+            android:text="           "
+            android:background="@color/grey_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivPlaceImage"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/item_socket_text_size"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivPlaceImage"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+</merge>

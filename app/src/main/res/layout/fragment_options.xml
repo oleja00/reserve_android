@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/fake_options"
+        layout="@layout/fake_options"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rToShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bStartSearch"
+        android:visibility="gone">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/background_edit_comment"
+                    android:gravity="top"
+                    android:hint="@string/input"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_text_color"
+                    android:textColorHint="@color/grey_text_color" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/bStartSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="@string/start_search"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:src="@mipmap/logo_main"
+    android:scaleType="centerInside"
+    android:padding="100dp"
+    android:id="@+id/fullscreen_content"
+    tools:context=".presenter.splash.SplashActivity">
+
+</ImageView>

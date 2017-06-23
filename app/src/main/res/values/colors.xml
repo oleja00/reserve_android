@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5dc0e0</color>
+    <color name="buttonDetailServiceHistoryBackground">#be0003</color>
+    <color name="colorPrimaryDark">#3e93ae</color>
+    <color name="colorAccent">#5dc0e0</color>
+    <color name="grey">#f5f5f5</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="grey_divider">#30766c6c</color>
+    <color name="grey_text_color">#b5b3b3</color>
+    <color name="grey_background">#f6f4f4</color>
+    <color name="grey_darker_background">#efefef</color>
+    <color name="green">#61d095</color>
+</resources>

@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/tvOptionSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:background="@color/grey_text_color"
+        android:textSize="@dimen/option_item_text_size"
+        android:text="                       " />
+
+    <TextView
+        android:id="@+id/spOptionSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:background="@color/grey_text_color"
+        android:text="     "
+        android:textSize="@dimen/option_item_text_size" />
+
+    <TextView
+        android:id="@+id/tvDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/spOptionSelect"
+        android:layout_toStartOf="@+id/spOptionSelect"
+        android:background="@color/grey_text_color"
+
+        android:text="   "
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/option_item_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvOptionSelect"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/grey_background" />
+</RelativeLayout>

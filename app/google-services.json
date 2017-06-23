@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "135324448504",
+    "firebase_url": "https://reserve-3b42b.firebaseio.com",
+    "project_id": "reserve-3b42b",
+    "storage_bucket": "reserve-3b42b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135324448504:android:c345308e03c20bcd",
+        "android_client_info": {
+          "package_name": "com.maxkudla.reserve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135324448504-f0ug3r8v9g3c4rjn9qr2i40024s9889r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAqSQ0HtP1KtOpvddVDmbb1X9xEudF73c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

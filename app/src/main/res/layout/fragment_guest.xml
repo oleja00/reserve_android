@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_collapseMode="pin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:gravity="center_vertical"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/ivGuestImage"
+        android:layout_width="@dimen/item_socket_width_height"
+        android:layout_height="@dimen/item_socket_width_height"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@mipmap/client_placeholder" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivIcon"-->
+    <!--android:layout_width="24dp"-->
+    <!--android:layout_height="24dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:background="@android:color/black"-->
+    <!--android:contentDescription="@null"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/ivGuestImage"
+
+        android:layout_toRightOf="@id/ivGuestImage"
+        android:background="@drawable/background_text_green"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Restaurant"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvGuests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDistance"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@id/ivGuestImage"
+        android:layout_toRightOf="@id/ivGuestImage"
+        android:text="@string/guests"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_socket_title_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvGuestsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDistance"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tvGuests"
+        android:layout_toRightOf="@id/tvGuests"
+        android:textSize="@dimen/item_socket_title_text_size"
+        tools:text="4" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivGuestImage"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@id/ivGuestImage"
+        android:layout_toRightOf="@id/ivGuestImage"
+        android:text="@string/distance"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_socket_title_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDistanceCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivGuestImage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tvDistance"
+        android:layout_toRightOf="@id/tvDistance"
+        android:textSize="@dimen/item_socket_title_text_size"
+        tools:text="2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ivGuestImage"
+        android:layout_margin="3dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvClientsNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivGuestImage"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_background"
+        android:padding="5dp"
+        android:text="@string/note_from_client" />
+
+    <TextView
+        android:id="@+id/tvNoteFromClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvClientsNote"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="note_from_client" />
+
+    <RelativeLayout
+        android:id="@+id/additional_features_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bSendOffer"
+        android:layout_below="@+id/tvNoteFromClient">
+
+        <TextView
+            android:id="@+id/tvAdditionalF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:background="@color/grey_background"
+            android:padding="5dp"
+            android:text="@string/additional_features" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/guestRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvAdditionalF"
+
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rWelcomeDrink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAdditionalF"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/tvWelcomeDrink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_drink"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/option_item_text_size" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/swcWelcomeDrink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvWelcomeDrink"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@color/grey_background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rTaxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rWelcomeDrink"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/tvTaxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taxi"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/option_item_text_size" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/swcTaxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvTaxi"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@color/grey_background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rTaxi"
+            android:layout_toEndOf="@+id/guestRecycler"
+            android:layout_toRightOf="@+id/guestRecycler"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/tvOptionSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/discount"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/option_item_text_size" />
+
+            <TextView
+                android:id="@+id/ivOptionSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:text="%" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/tvOptionPreview"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toStartOf="@id/ivOptionSelect"
+                android:layout_toLeftOf="@id/ivOptionSelect"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="5"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvOptionSelect"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@color/grey_background" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/bSendOffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

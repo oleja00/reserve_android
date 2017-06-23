@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/halg_horizontal_margin"
+        android:paddingBottom="@dimen/halg_horizontal_margin"
+        android:background="@color/grey"
+        android:text="@string/application_info"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentEnd="true"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/grey"/>
+    </RelativeLayout>
+
+   <TextView
+       android:id="@+id/tvRate"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       android:layout_marginTop="@dimen/activity_horizontal_margin"
+       android:layout_marginBottom="@dimen/activity_horizontal_margin"
+       android:textStyle="bold"
+       android:textColor="@android:color/black"
+       android:gravity="center_horizontal"
+       android:text="@string/rate_this_app"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/halg_horizontal_margin"
+        android:paddingBottom="@dimen/halg_horizontal_margin"
+        android:background="@color/grey"
+        android:text="@string/account_info"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/halg_horizontal_margin"
+        android:paddingBottom="@dimen/halg_horizontal_margin"
+        android:background="@color/grey" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/_169_binocle"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="All rights reserved"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="2017"/>
+</LinearLayout>

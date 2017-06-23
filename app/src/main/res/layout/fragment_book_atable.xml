@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context=".presenter.socket.book.BookATableFragment">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bSendRequest"
+
+        tools:context=".presenter.socket.book.BookATableFragment">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/book_table_collapsing_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:collapsedTitleGravity="center"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/ivBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-36dp"
+                    android:contentDescription="@null"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_collaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:layout_collapseMode="pin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:id="@+id/tvInstitutionName"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toEndOf="@+id/ivBack"
+                            android:layout_toRightOf="@+id/ivBack"
+                            android:layout_toLeftOf="@+id/tvCancel"
+                            android:layout_toStartOf="@+id/tvCancel" />
+
+                        <TextView
+                            android:id="@+id/tvCancel"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:gravity="center_vertical|end"
+                            android:text="@string/cancel"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_book_atable" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <Button
+        android:id="@+id/bSendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="@string/ordered"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

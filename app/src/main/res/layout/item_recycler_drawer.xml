@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_menu"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivDrawerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:contentDescription="@null"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_menu_camera"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDrawerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_toEndOf="@+id/ivDrawerIcon"
+        android:layout_toRightOf="@+id/ivDrawerIcon"
+        android:orientation="vertical"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="blabla" />
+
+    <View
+        android:id="@+id/vForPosition"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+
+</RelativeLayout>

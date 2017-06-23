@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+
+    <TextView
+        android:id="@+id/tvOptionSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:background="@color/grey_text_color"
+        android:textSize="@dimen/option_item_text_size"
+        android:text="            " />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/swcOptionSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvOptionSwitcher"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/grey_background" />
+</RelativeLayout>

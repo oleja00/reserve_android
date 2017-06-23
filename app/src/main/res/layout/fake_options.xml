@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fake_button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_background" />
+
+            <include layout="@layout/empty_options_select" />
+
+            <include layout="@layout/empty_options_select" />
+
+            <include layout="@layout/empty_options_select" />
+
+            <include layout="@layout/empty_options_select" />
+
+            <include layout="@layout/empty_options_switcher" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_background" />
+
+            <include layout="@layout/empty_options_list" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_edit_comment"
+                android:gravity="top"
+                android:text="@string/input"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textColor="@color/grey_text_color"
+                android:textColorHint="@color/grey_text_color" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/fake_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:enabled="false"
+        android:text="@string/start_search"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

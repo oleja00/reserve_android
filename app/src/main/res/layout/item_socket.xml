@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/ivPlaceImage"
+        android:layout_width="@dimen/item_socket_width_height"
+        android:layout_height="@dimen/item_socket_width_height"
+        android:background="@mipmap/client_placeholder"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvPlaceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_socket_title_text_size"
+        android:textStyle="bold"
+        tools:text="Restaurant" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPlaceName"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="@dimen/item_socket_text_size"
+        tools:text="Restaurant" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setOfStar"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage"
+        android:background="@drawable/background_text_gray"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/grey_text_color"
+        android:textSize="@dimen/item_socket_text_size"
+        tools:text="22rn" />
+
+    <TextView
+        android:id="@+id/tvPlaceAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setOfStar"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_toEndOf="@id/tvDistance"
+        android:layout_toRightOf="@id/tvDistance"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textSize="@dimen/item_socket_text_size"
+        tools:text="Кирова 22" />
+
+    <com.maxkudla.reserve.presenter.common.views.SetOfStarView
+        android:id="@+id/setOfStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivPlaceImage"
+        android:layout_marginLeft="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_marginStart="@dimen/item_socket_margin_start_from_place_image"
+        android:layout_toEndOf="@id/ivPlaceImage"
+        android:layout_toRightOf="@id/ivPlaceImage" />
+
+    <TextView
+        android:id="@+id/tvPricePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivPlaceImage"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/item_socket_text_size"
+        android:textStyle="bold"
+        tools:text="$$-$$$" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivIconTaxi"
+                android:layout_width="@dimen/item_socket_icon_type_width_height"
+                android:layout_height="@dimen/item_socket_icon_type_width_height"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivIconCoctail"
+                android:layout_width="@dimen/item_socket_icon_type_width_height"
+                android:layout_height="@dimen/item_socket_icon_type_width_height"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="end">
+            <ImageView
+                android:id="@+id/ivDiscount"
+                android:layout_width="@dimen/item_socket_icon_type_width_height"
+                android:layout_height="@dimen/item_socket_icon_type_width_height"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                tools:text="30%" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ivPlaceImage"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>
